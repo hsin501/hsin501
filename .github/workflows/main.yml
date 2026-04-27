@@ -27,8 +27,9 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?color_snake=#E57392 
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#E57392&palette=github-dark
+            dist/github-pink-theme.svg?color_snake=#E57392&color_dots=#ebedf0,#f3abbc,#ee879e,#e96281,#E57392
 
       # 2. 將生成的文件推送到 output 分支（這樣 README 才能連結到它）
       - name: push github-contribution-grid-snake.svg to the output branch
